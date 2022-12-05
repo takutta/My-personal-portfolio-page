@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dracula">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaakko</title>
+    {% assets 'css' %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+  </head>
+  <body>
+    <!-- component -->
+<div class="w-full font-sans">
+  <div class="shadow">
+    <div class="container px-5">
+      <div class="flex flex-wrap py-5 items-left">
+        <a class="flex-none mb-5 mr-5 text-4xl">logo</a>
+          <a href="#" class="flex-none mb-5 mr-5 text-4xl hover:text-blue-400">Minä</a>
+          <a href="#" class="flex-none mb-5 mr-5 text-4xl hover:text-blue-400">Projektit</a>
+          <a href="#" class="flex-none mr-0 text-4xl hover:text-blue-400">Musiikki</a>
+        </div>
+      </div>
+    {% block content %}{% endblock %}
+  </div> <!-- container-->
+</div> <!-- shadow-->
+</div> <!-- w-full-->
+
+
+  </body>
+</html>
