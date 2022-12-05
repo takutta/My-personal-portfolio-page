@@ -4,6 +4,9 @@ from livereload import Server
 
 app = Flask(__name__)
 
+
+
+
 assets = Environment(app)
 css = Bundle("src/main.css", output="dist/main.css")
 assets.register("css", css)
@@ -17,6 +20,6 @@ def base_page():
 	)
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0')
-    #server = Server(app.wsgi_app)
-    #server.serve()
+    #app.run(debug=False, host='0.0.0.0')
+    server = Server(app.wsgi_app)
+    server.serve()
