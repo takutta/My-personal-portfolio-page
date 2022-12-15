@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dracula">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaakko</title>
-    {% assets 'css' %}
-    <link rel="stylesheet" href="{{ ASSET_URL }}" />
-    {% endassets %}
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{% block title %}{% endblock title %}</title>
+      <!-- Google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Amethysta&display=swap" rel="stylesheet">
+      
+      {% assets 'css' %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" />
+      {% endassets %}
+
   </head>
-  <body>
-
-    <div class="w-full font-sans">
-  <div class="shadow">
-    <div class="container px-5">
-      <!-- menu-->
-      <div class="flex flex-wrap py-5 items-left">
-        <a class="flex-none mb-5 mr-5 text-4xl">logo</a>
-          <a href="#" class="flex-none mb-5 mr-5 text-4xl hover:text-blue-400">Minä</a>
-          <a href="#" class="flex-none mb-5 mr-5 text-4xl hover:text-blue-400">Projektit</a>
-          <a href="#" class="flex-none mr-0 text-4xl hover:text-blue-400">Musiikki</a>
-        </div>
-      </div>
-    {% block content %}{% endblock %}
-  </div> <!-- container-->
-</div> <!-- shadow-->
-</div> <!-- w-full-->
-
-
-  </body>
+<body>
+    <div class ="flex justify-center font-teksti">
+      <div class="container px-2 max-w-10xl md:px-5">
+        <!-- navbar -->
+        <div class="flex flex-wrap py-2 pb-5 text-2xl md:text-4xl items-left font-otsikko place-items-center">
+          <div class="flex-none w-12 mr-5 md:w-28 "><img class="object-scale-down w-12 md:w-28 h-50 mask mask-squircle" src="https://placeimg.com/100/100/arch" /></div>           
+            <a href="{{ url_for('etusivu.index') }}" class="py-5 flex-none mr-5 hover:text-primary {% if selected == "Minä" %} text-primary {% else %} hover:scale-95 duration-100 {% endif %}">Minä</a>
+            <a href="{{ url_for('projektit.index') }}" class="py-5 flex-none mr-5 hover:text-secondary {% if selected == "Projektit" %} text-secondary {% else %} hover:scale-95 duration-100 {% endif %}">Projektit</a>
+            <a href="{{ url_for('musiikki.index') }}" class="py-5 flex-none mr-0 hover:text-accent {% if selected == "Musiikki" %} text-accent {% else %} hover:scale-95 duration-100 {% endif %}">Musiikki</a>
+          </div>
+          {% block content %}{% endblock %}
+        </div>  <!-- flex-->  
+      </div> <!-- container-->
+    </div> <!-- flex -->
+</body>
 </html>

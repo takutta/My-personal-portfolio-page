@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Jaakko{% endblock title %}
+{% block content %}
+<article class="prose max-w-none md:prose-xl">
+  <div class="flex flex-row flex-wrap w-full gap-4 md:flex-nowrap">
+    <div class="p-0 m-0 md:basis-1/4">
+        <img src="/static/images/omakuva_pieni.png"></div>
+    <div class="content-center md:basis-3/4">
+        <h1><h1 class="font-normal">Hei! Olen Jaakko ja haluan töihin koodaamaan.</h1>
+    </div>
+  </div>
+  <div class="flex flex-row">
+    <div class="basis-1/2">
+      <h3 class="font-otsikko" id="awards">Awards</h3>
+      <ul>
+        <li>
+          <strong>Academy Awards</strong>
+          <ul>
+            <li>Sound Effects Editing</li>
+            <li>Visual Effects</li>
+          </ul>
+        </li>
+        <li>
+          <strong>BAFTA</strong>
+          <ul>
+            <li>Visual Effects</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Saturns</strong>
+          <ul>
+            <li>Best Science Fiction Film</li>
+            <li>Best Actress (Sigourney Weaver)</li>
+            <li>Best Supporting Actor (Bill Paxton)</li>
+            <li>Best Supporting Actress (Jeanette Goldstein)</li>
+            <li>Best Performance by a Younger Actor (Carrie Henn)</li>
+            <li>Best Direction (James Cameron)</li>
+            <li>Best Writing (James Cameron)</li>
+            <li>Best Special Effects</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="basis-1/2">
+      <h3 class="font-otsikko" id="cast">Cast</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sigourney Weaver</td>
+            <td>Ripley</td>
+          </tr>
+          <tr>
+            <td>Carrie Henn</td>
+            <td>Newt</td>
+          </tr>
+          <tr>
+            <td>Michael Biehn</td>
+            <td>Corporal Hicks</td>
+          </tr>
+          <tr>
+            <td>Paul Reiser</td>
+            <td>Burke</td>
+          </tr>
+          <tr>
+            <td>Lance Henriksen</td>
+            <td>Bishop</td>
+          </tr>
+          <tr>
+            <td>Bill Paxton</td>
+            <td>Private Hudson</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+{% endblock %}
