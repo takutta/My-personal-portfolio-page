@@ -16,15 +16,14 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y npm
-RUN npm install
-RUN npx tailwindcss build static/src/main.css -o static/dist/main.css
-
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chmod 444 app.py
-
 RUN chmod 444 requirements.txt
+
+RUN apt-get update && apt-get install -y npm
+RUN npm install tailwindcss
+RUN npx tailwindcss build static/src/main.css -o static/dist/main.css
 
 # Service must listen to $PORT environment variable.
 # This default value facilitates local development.
