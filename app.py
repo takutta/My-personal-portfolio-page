@@ -15,9 +15,10 @@ app.register_blueprint(etusivu_bp)
 app.register_blueprint(projektit_bp)
 app.register_blueprint(musiikki_bp)
         
+css = Bundle('src/main.css', output='dist/main.css', filters='postcss')
+
 assets = Environment(app)
-css = Bundle("src/main.css", output="dist/main.css")
-assets.register("css", css)
+assets.register('main_css', css)
 css.build()
 
 if __name__ == "__main__":

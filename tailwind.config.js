@@ -1,12 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './templates/**/*.html',
+    './projektit/**/*.html'
   ],
-  corePlugins: {
-    fontSize: false,
-    // ...
-},
   theme: {
     fontFamily: {
       teksti: ["Alata", "cursive"],
