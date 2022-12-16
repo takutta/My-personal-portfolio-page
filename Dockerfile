@@ -21,7 +21,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN chmod 444 app.py
 RUN chmod 444 requirements.txt
 
-RUN apt-get update && npm init -y && npm install tailwindcss autoprefixer tailwindcss-fluid-type daisyui @tailwindcss/typography && npx tailwindcss init -p
+RUN apt-get update
+RUN npm init -y
+RUN npm install tailwindcss autoprefixer tailwindcss-fluid-type daisyui @tailwindcss/typography
+RUN npx tailwindcss init -p
 RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
 
 # Service must listen to $PORT environment variable.
