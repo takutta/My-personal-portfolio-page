@@ -9,9 +9,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Alata&family=Amethysta&display=swap" rel="stylesheet">
       
-      {% assets 'main_css' %}
-      <link rel="stylesheet" href="{{ ASSET_URL }}" />
-      {% endassets %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='dist/main.css') }}">
 
   </head>
 <body>

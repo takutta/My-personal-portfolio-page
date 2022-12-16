@@ -1,5 +1,4 @@
 from flask import Flask, render_template, session, url_for, redirect
-from flask_assets import Bundle, Environment
 from livereload import Server
 import os
 
@@ -15,12 +14,6 @@ app.register_blueprint(etusivu_bp)
 app.register_blueprint(projektit_bp)
 app.register_blueprint(musiikki_bp)
         
-css = Bundle('src/main.css', output='dist/main.css')
-
-assets = Environment(app)
-assets.register('main_css', css)
-css.build()
-
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
     

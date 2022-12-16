@@ -16,9 +16,9 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y nodejs npm
+RUN apt-get update && apt-get install -y npm
 RUN npm install
-
+RUN npx tailwindcss build static/src/main.css -o static/dist/main.css
 
 RUN pip install --no-cache-dir -r requirements.txt
 
