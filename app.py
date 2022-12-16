@@ -1,14 +1,12 @@
 from flask import Flask, render_template, session, url_for, redirect
 from flask_assets import Bundle, Environment
 from livereload import Server
+import os
 
 # Import parts of our application
 from etusivu import etusivu_bp
 from projektit import projektit_bp
 from musiikki import musiikki_bp
-
-
-
 
 app = Flask(__name__)
 
@@ -22,9 +20,8 @@ css = Bundle("src/main.css", output="dist/main.css")
 assets.register("css", css)
 css.build()
 
-app.debug = True
-
 if __name__ == "__main__":
-    #app.run(debug=False, host='0.0.0.0')
-    server = Server(app.wsgi_app)
-    server.serve()
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    
+    #server = Server(app.wsgi_app)
+    #server.serve()
