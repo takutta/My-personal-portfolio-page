@@ -16,6 +16,10 @@ COPY . /app
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y nodejs
+RUN npm install
+
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chmod 444 app.py
