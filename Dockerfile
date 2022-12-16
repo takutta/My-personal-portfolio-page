@@ -23,7 +23,7 @@ RUN chmod 444 requirements.txt
 
 RUN apt-get update && apt-get install -y npm
 RUN npm install tailwindcss
-RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
+RUN npx tailwindcss -i static/src/main.css -o static/dist/main.css
 
 
 # Service must listen to $PORT environment variable.
