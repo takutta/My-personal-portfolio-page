@@ -16,8 +16,8 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y nodejs
-RUN /usr/local/bin/npm install
+RUN apt-get update && apt-get install -y nodejs npm
+RUN npm install
 
 
 RUN pip install --no-cache-dir -r requirements.txt
