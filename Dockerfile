@@ -17,5 +17,6 @@ RUN npx tailwindcss init -p
 RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
 
 ENV PORT 8080
+ENV FLASK_ENV=production
 # Run the web service on container startup.
 CMD [ "waitress-serve", "--port $PORT", "app:app" ]
