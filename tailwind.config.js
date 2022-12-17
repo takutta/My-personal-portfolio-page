@@ -13,6 +13,7 @@ module.exports = {
     },
   plugins: [
     require('daisyui' ),
+    require('tailwindcss-fluid-type'),
     require('@tailwindcss/typography')
   ]
 }
