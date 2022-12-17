@@ -1,9 +1,12 @@
-# syntax=docker/dockerfile:1
-#FROM --platform=$BUILDPLATFORM python:3.10-slim-bullseye
-FROM python:3-slim
+FROM python:3.10-slim
 
-COPY . /app
-WORKDIR /app
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
+
+# Copy local code to the container image.
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -12,11 +15,11 @@ RUN chmod 444 requirements.txt
 
 RUN apt-get update
 RUN apt-get install -y npm
-RUN npm install tailwindcss autoprefixer tailwindcss-fluid-type daisyui @tailwindcss/typography
+RUN npm install tailwindcss autoprefixer daisyui @tailwindcss/typography
 RUN npx tailwindcss init -p
 RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
 
 ENV PORT 8080
 ENV FLASK_ENV=production
 # Run the web service on container startup.
-CMD [ "waitress-serve", "--port $PORT", "app:app" ]
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
