@@ -22,4 +22,4 @@ RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
 ENV PORT 8080
 ENV FLASK_ENV=production
 # Run the web service on container startup.
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
+CMD [ "waitress-serve", "--port", "8080", "app:app" ]
