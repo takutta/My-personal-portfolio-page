@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  corePlugins: {
-    fontSize: false
-  },
   mode: 'jit',
   content: [
     './templates/**/*.html',
@@ -16,7 +13,6 @@ module.exports = {
     },
   plugins: [
     require('daisyui' ),
-    require('tailwindcss-fluid-type'),
     require('@tailwindcss/typography')
   ]
 }
