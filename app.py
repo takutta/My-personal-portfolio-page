@@ -9,7 +9,7 @@ from musiikki import musiikki_bp
 
 app = Flask(__name__)
 
-# Register Blueprints
+# Register Blueprintss
 app.register_blueprint(etusivu_bp)
 app.register_blueprint(projektit_bp)
 app.register_blueprint(musiikki_bp)
