@@ -9,6 +9,7 @@
     "daisyui": "^2.45.0",
     "npm-upgrade": "^3.1.0",
     "photoswipe": "^5.3.4",
+    "postcss": "^8.4.21",
     "save-dev": "^0.0.1-security",
     "tailwindcss": "^3.2.4"
   },
