@@ -9,7 +9,7 @@
 </div>
 <div class="grid gap-4 md:gap-6 lg:gap-5 lg:grid-cols-2">
     {%for projekti in projektilista %}
-    <a href="{{'/projektit/' + projekti["konenimi"]}}" class="flex flex-col items-center transition-all duration-300 bg-white border rounded-lg shadow-md md:flex-row md:max-w-4xl hover:saturate-150 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <a href="{{'/projektit/' + projekti["konenimi"]}}" class="flex flex-col items-center transition-all duration-300 bg-white bg-gray-700 border border-gray-700 rounded-lg shadow-md md:flex-row md:max-w-4xl hover:saturate-150 hover:bg-gray-800 hover:border-gray-600">
         <img src="{{ url_for('static', filename='{}{}{}{}{}'.format('images/', projekti['konenimi'], '/', projekti['konenimi'], '.jpg')) }}" class="object-cover rounded-t-lg 2xl:w-96 xl:w-80 lg:w-56 md:w-56 md:rounded-none md:rounded-l-lg" alt="">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 otsikko dark:text-white">{{projekti["nimi"]}}</h5>

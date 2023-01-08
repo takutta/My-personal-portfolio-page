@@ -36,14 +36,14 @@
         <div
           class="flex flex-wrap py-2 pb-5 text-2xl md:text-4xl items-left font-otsikko place-items-center"
         >
-          <div class="flex-none w-12 mr-5 md:w-28">
-            <img
+          <div class="flex-none w-12 mr-2 md:mr-5 md:w-28">
+            <a href="{{ url_for('etusivu.index') }}"><img
               class="object-scale-down w-12 transition-all duration-200 md:w-28 h-50 hover:rotate-12"
               src="{{ url_for('static', filename='images/lehdet.png') }}"
-            />
+            /></a>
           </div>
-          <a href="{{ url_for('etusivu.index') }}" class="py-5 flex-none mr-5 hover:text-red-500 {% if selected == "Minä" %} text-red-500 {% else %} hover:scale-95 duration-100 {% endif %}">Minä</a>
-          <a href="{{ url_for('projektit.index') }}" class="py-5 flex-none mr-5 hover:text-lime-500 {% if selected == "Projektit" %} text-lime-500 {% else %} hover:scale-95 duration-100 {% endif %}">Projektit</a>
+          <a href="{{ url_for('etusivu.index') }}" class="py-5 flex-none mr-2 md:mr-5 hover:text-red-500 {% if selected == "Minä" %} text-red-500 {% else %} hover:scale-95 duration-100 {% endif %}">Minä</a>
+          <a href="{{ url_for('projektit.index') }}" class="py-5 flex-none mr-2 md:mr-5 hover:text-lime-500 {% if selected == "Projektit" %} text-lime-500 {% else %} hover:scale-95 duration-100 {% endif %}">Projektit</a>
           <a href="{{ url_for('musiikki.index') }}" class="py-5 flex-none mr-0 hover:text-yellow-500 {% if selected == "Musiikki" %} text-yellow-500 {% else %} hover:scale-95 duration-100 {% endif %}">Musiikki</a>
 
         </div>
