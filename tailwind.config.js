@@ -14,5 +14,17 @@ module.exports = {
   plugins: [
     require('daisyui' ),
     require('@tailwindcss/typography')
-  ]
+  ],
+  daisyui: {
+    themes: [
+      {
+        dracula: {
+          ...require("daisyui/src/colors/themes")["[data-theme=dracula]"],
+          primary: "#D4441E",
+          secondary: "#BFC906",
+          accent: "#FBBA07"
+        },
+      },
+    ],
+  },
 }

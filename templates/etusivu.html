@@ -1,84 +1,56 @@
-{% extends 'base.html' %}
-{% block title %}Jaakko{% endblock title %}
-{% block content %}
+{% extends 'base.html' %} {% block title %}Jaakko{% endblock title %} {% block
+content %}
 <article class="prose max-w-none md:prose-xl">
-  <div class="flex flex-row flex-wrap w-full gap-4 md:flex-nowrap">
-    <div class="p-0 m-0 md:basis-1/4">
-        <img src="/static/images/omakuva_pieni.png"></div>
-    <div class="content-center md:basis-3/4">
-        <h1><h1 class="font-normal">Hei! Olen Jaakko ja haluan töihin koodaamaan.</h1>
+  <div class="flex flex-col items-center sm:gap-4 sm:flex-row">
+    <div class="p-0 mx-2 md:basis-1/4">
+      <img style="margin-top: 0" src="/static/images/omakuva_pieni.png" />
+    </div>
+    <div class="mx-2 ml-2 justify-content md:basis-3/4">
+      <h1
+        class="text-center font-otsikko sm:text-left"
+        style="line-height: 1.2em"
+      >
+        Olen Jaakko Haavisto ja<br />
+        haluan kehittäjäksi.
+      </h1>
     </div>
   </div>
-  <div class="flex flex-row">
-    <div class="basis-1/2">
-      <h3 class="font-otsikko" id="awards">Awards</h3>
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-5">
+    <div>
+      <h3 class="font-otsikko" style="margin-top: 0">Tarina</h3>
+      <p>
+        Olen työskennellyt lastenhoitajana päiväkodissa jo aikani. Syksyllä 2022
+        viimein tajusin, että koodaus, sovellusten suunnittelu ja kehittäminen
+        ovat ne minun <strong>oikeat juttuni</strong>.
+      </p>
+    </div>
+    <div class="lg:col-span-2">
+      <h3 class="font-otsikko" style="margin-top: 0">Opiskelut</h3>
       <ul>
         <li>
-          <strong>Academy Awards</strong>
-          <ul>
-            <li>Sound Effects Editing</li>
-            <li>Visual Effects</li>
-          </ul>
+          <a href="https://ohjelmointi-22.mooc.fi">Ohjelmoinnin perusteet</a> -
+          Johdatus ohjelmointiin Python-kielellä.<br />Helsingin yliopiston
+          verkkokurssi 5 op<br />Arvosana 5/5
         </li>
         <li>
-          <strong>BAFTA</strong>
-          <ul>
-            <li>Visual Effects</li>
-          </ul>
+          <a href="https://scrimba.com/learn/frontend"
+            >The Frontend Developer Career Path</a
+          ><br /><a href="https://Scrimba.com">Scrimba</a><br />Kesken: 15%
+          valmis
         </li>
         <li>
-          <strong>Saturns</strong>
-          <ul>
-            <li>Best Science Fiction Film</li>
-            <li>Best Actress (Sigourney Weaver)</li>
-            <li>Best Supporting Actor (Bill Paxton)</li>
-            <li>Best Supporting Actress (Jeanette Goldstein)</li>
-            <li>Best Performance by a Younger Actor (Carrie Henn)</li>
-            <li>Best Direction (James Cameron)</li>
-            <li>Best Writing (James Cameron)</li>
-            <li>Best Special Effects</li>
-          </ul>
+          <a
+            href="https://amp.jamk.fi/asio/kurssiilmo/jamk/?asio=c2E3Y2EyMWNkY2Q1NmE0MGMzZTlkOTFkOGY2NzhhZGY0O2dBQTtyO2ZrdXJzc2ludGllZG90O2M3Nzg3MjtsZmlu"
+            >Digiosaaja</a
+          >, 30 op (verkkototeutus)<br /><a href="https://www.jamk.fi">JAMK</a
+          ><br />Kesken.
         </li>
       </ul>
     </div>
-    <div class="basis-1/2">
-      <h3 class="font-otsikko" id="cast">Cast</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sigourney Weaver</td>
-            <td>Ripley</td>
-          </tr>
-          <tr>
-            <td>Carrie Henn</td>
-            <td>Newt</td>
-          </tr>
-          <tr>
-            <td>Michael Biehn</td>
-            <td>Corporal Hicks</td>
-          </tr>
-          <tr>
-            <td>Paul Reiser</td>
-            <td>Burke</td>
-          </tr>
-          <tr>
-            <td>Lance Henriksen</td>
-            <td>Bishop</td>
-          </tr>
-          <tr>
-            <td>Bill Paxton</td>
-            <td>Private Hudson</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="">
+      <h3 class="font-otsikko" style="margin-top: 0">Ihmisenä</h3>
+      <p>Blah</p>
     </div>
   </div>
 </article>
-
 {% endblock %}

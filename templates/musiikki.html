@@ -1,14 +1,176 @@
+{% extends 'base.html' %}{% block title %}Musiikki{% endblock title %} {% block
+head %} {{ super() }}
+<!-- photoswipe -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/photoswipe/dist/photoswipe.css"
+/>
+<script src="https://unpkg.com/photoswipe/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+<script src="https://unpkg.com/photoswipe/dist/umd/photoswipe.umd.min.js"></script>
+{% endblock %}{% block content %}
+<article class="prose max-w-none md:prose-xl">
+  <div class="flex flex-col sm:flex-row">
+    <div class="sm:basis-1/2">
+      <div class="mr-2"><h1 class="font-otsikko">Musiikki</h1>
 
-{% extends 'base.html' %}
-{% block title %}Musiikki{% endblock title %}
-{% block content %}
-<iframe
-  width="100%"
-  height="700"
-  scrolling="no"
-  frameborder="no"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1198246297&color=%23688064&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-></iframe>
-  {% endblock %}
-</div>
+      <p>Olen soitellut kitaraa ja tehnyt musiikkia reilut parikymmentä vuotta. Tyylini on monesti elektronista, hieman melankolista tunnelmointia retrosaundeilla höystettynä. Juuri nyt ei ole mitään projektia päällä kaiken ajan mennessä koodauksen parissa. Seuraavaksi eniten kiinnostaisi kollaboraatio laulajan kanssa. Jos sinulla on joku laulu, johon haluaisit itseni näköisen taustan, laitappa viestiä. Yhteystiedot löytyvät <a href="/">Minä</a>-sivulta.
+      </p></div><h3 class="font-otsikko">Kuvia vuosien varrelta</h3>
+      <div class="col-span-2 pswp-gallery my-gallery not-prose" id="my-gallery">
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/aanittelya.jpg"
+            class="float-left mr-2"
+            data-pswp-width="1484"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/aanittelya_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/kitarointia.jpg"
+            class="float-left mr-2"
+            data-pswp-width="547"
+            data-pswp-height="640"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/kitarointia_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/makkari.jpg"
+            class="float-left mr-2"
+            data-pswp-width="1484"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/makkari_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/luukku.jpg"
+            class="float-left mr-2"
+            data-pswp-width="640"
+            data-pswp-height="480"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/luukku_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/akkari.jpg"
+            class="float-left mr-2"
+            data-pswp-width="835"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/akkari_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/akustinen.jpg"
+            class="float-left mr-2"
+            data-pswp-width="835"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/akustinen_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/basso.jpg"
+            class="float-left mr-2"
+            data-pswp-width="835"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/basso_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/lappari.jpg"
+            class="float-left mr-2"
+            data-pswp-width="1484"
+            data-pswp-height="1113"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/lappari_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <figure class="transition-all duration-300 filter hover:saturate-200">
+          <a
+            href="static/images/musiikki/sohva.jpg"
+            class="float-left mr-2"
+            data-pswp-width="1486"
+            data-pswp-height="1114"
+            target="_blank"
+          >
+            <img
+              src="static/images/musiikki/sohva_thumb.jpg"
+              class="my-1 rounded-lg"
+              alt=""
+            />
+          </a>
+        </figure class="transition-all duration-300 filter hover:saturate-200">
+      </div>
+    </div>
+    <div class="sm:basis-1/2">
+      <iframe
+        width="100%"
+        height="1100"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1198246297&color=%23688064&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+      ></iframe>
+    </div>
+  </div>
+</article>
+<script type="text/javascript">
+  var lightbox = new PhotoSwipeLightbox({
+    gallery: ".my-gallery",
+    children: "a",
+    pswpModule: PhotoSwipe,
+  });
+  lightbox.init();
+</script>
+{% endblock %}

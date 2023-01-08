@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dracula">
   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{% block title %}{% endblock title %}</title>
-      <!-- Google fonts-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Amethysta&display=swap" rel="stylesheet">
-      
-      <link rel="stylesheet" href="{{ url_for('static', filename='dist/main.css') }}">
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock title %}</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Jaakko.info">
+    <meta name="application-name" content="Jaakko.info">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Amethysta&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dist/main.css') }}"
+    />
+    {% endblock %}
   </head>
-<body>
-    <div class ="flex justify-center font-teksti">
+  <body>
+    <div class="flex justify-center mb-5 font-teksti">
       <div class="container px-2 max-w-10xl md:px-5">
         <!-- navbar -->
-        <div class="flex flex-wrap py-2 pb-5 text-2xl md:text-4xl items-left font-otsikko place-items-center">
-          <div class="flex-none w-12 mr-5 md:w-28 "><img class="object-scale-down w-12 md:w-28 h-50 mask mask-squircle" src="https://placeimg.com/100/100/arch" /></div>           
-            <a href="{{ url_for('etusivu.index') }}" class="py-5 flex-none mr-5 hover:text-primary {% if selected == "Minä" %} text-primary {% else %} hover:scale-95 duration-100 {% endif %}">Minä</a>
-            <a href="{{ url_for('projektit.index') }}" class="py-5 flex-none mr-5 hover:text-secondary {% if selected == "Projektit" %} text-secondary {% else %} hover:scale-95 duration-100 {% endif %}">Projektit</a>
-            <a href="{{ url_for('musiikki.index') }}" class="py-5 flex-none mr-0 hover:text-accent {% if selected == "Musiikki" %} text-accent {% else %} hover:scale-95 duration-100 {% endif %}">Musiikki</a>
+        <div
+          class="flex flex-wrap py-2 pb-5 text-2xl md:text-4xl items-left font-otsikko place-items-center"
+        >
+          <div class="flex-none w-12 mr-5 md:w-28">
+            <img
+              class="object-scale-down w-12 transition-all duration-200 md:w-28 h-50 hover:rotate-12"
+              src="{{ url_for('static', filename='images/lehdet.png') }}"
+            />
           </div>
-          {% block content %}{% endblock %}
-        </div>  <!-- flex-->  
-      </div> <!-- container-->
-    </div> <!-- flex -->
-</body>
+          <a href="{{ url_for('etusivu.index') }}" class="py-5 flex-none mr-5 hover:text-red-500 {% if selected == "Minä" %} text-red-500 {% else %} hover:scale-95 duration-100 {% endif %}">Minä</a>
+          <a href="{{ url_for('projektit.index') }}" class="py-5 flex-none mr-5 hover:text-lime-500 {% if selected == "Projektit" %} text-lime-500 {% else %} hover:scale-95 duration-100 {% endif %}">Projektit</a>
+          <a href="{{ url_for('musiikki.index') }}" class="py-5 flex-none mr-0 hover:text-yellow-500 {% if selected == "Musiikki" %} text-yellow-500 {% else %} hover:scale-95 duration-100 {% endif %}">Musiikki</a>
+
+        </div>
+        {% block content %}{% endblock %}
+      </div>
+      <!-- container-->
+      
+    </div>
+    <!-- flex -->
+    <footer class="items-center p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+      <span class="items-center w-full text-sm text-center text-gray-500 dark:text-gray-400">© 2023 Jaakko Haavisto. Lehtilogon oikeudet: <a href="https://www.setaswall.com" class="hover:underline">SetAsWall</a><br>Sivusto on tehty <a href="https://flask.palletsprojects.com" class="hover:underline">Flaskilla</a>, <a href="https://tailwindcss.com" class="hover:underline">Tailwind CSS:ää</a> käyttäen.
+      </span>
+      
+  </footer>
+  </body>
 </html>

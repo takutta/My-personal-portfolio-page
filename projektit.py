@@ -1,23 +1,19 @@
+import os
 from flask import Blueprint, render_template
 from flask import current_app as app
-from flask import abort
+from flask import abort, json
 
 # Blueprint Configuration
 projektit_bp = Blueprint(
-    'projektit', __name__, template_folder='projektit'
+    'projektit', __name__, template_folder='projektit', static_folder='static'
 )
 
-projektilista = [{"Nimi":"Hoitoajat Excel", "Järjestys":"10", "Kuva":"", "Esittely":"PäläPälä", "Teknologiat":["Excel","VBA"], "Url":"hoitoajat_excel"},
-            {"Nimi":"Lapsisoitin", "Järjestys":"50", "Kuva":"", "Esittely":"Ohjelma näyttää valitsemasi lastenohjelmat Yle Areenalta, TV7:lta jne. jonka jälkeen sammuttaa koneen unitilaan.", "Teknologiat":["Autohotkey"], "Url":"lapsisoitin"},
-            {"Nimi":"Kertolaskut", "Järjestys":"30", "Kuva":"", "Esittely":"Peli kertolaskujen oppimiseen", "Teknologiat":["Flask","Bootstrap"], "Url":"kertolaskut"},
-            {"Nimi":"Bingo", "Järjestys":"40", "Kuva":"", "Esittely":"Bingo-lappujen generointi ja tulostus", "Teknologiat":["Flask","PaperCSS"], "Url":"bingo"},
-            {"Nimi":"Ruokalistat", "Järjestys":"20", "Kuva":"", "Esittely":"Jyväskylän kaupungin päiväkodetien ruokalistojen haku ja tulostus", "Teknologiat":["Flask","Bootstrap"], "Url":"ruokalistat"}
-]
+filename = os.path.join(projektit_bp.static_folder, 'projektit.json')
+with open(filename, 'r', encoding='utf-8') as projektit:
+    projektilista = json.load(projektit)
 
 # Sorttaus järjestyksen mukaan
-projektilista = sorted(projektilista, key=lambda d: d['Järjestys']) 
-
-#tekno-varit = {"Excel":"Blue", "VBA":"Green"}
+projektilista = sorted(projektilista, key=lambda x: x['järjestys']) 
 
 @projektit_bp.route('/projektit', methods=['GET'])
 def index():
@@ -27,8 +23,13 @@ def index():
 
 @projektit_bp.route('/projektit/<name>', methods=['GET'])
 def show(name):
-    try:
-        return render_template('%s.html' % name, selected = "Projektit", projektilista = projektilista)
-    except:
-        abort(404)
+#try:
+    ' etsitään oikea dict konenimen perusteella'
+    for i in range(0, len(projektilista)):
+        if projektilista[i]['konenimi'] == name:
+            nimi = projektilista[i]['nimi']    
+            numero = i
+    return render_template('base_projektit.html', projekti = projektilista[numero], projekti_nimi = nimi, selected = "Projektit")
+#except:
+    abort(404)
     

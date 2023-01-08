@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Flask { 
+    background: #eee;
+    color: black
+}
+.Bootstrap {
+    background: #712cf9 
+}
+
+.Excel {
+    background: #107c41;
+    color: white
+}
+
+.PowerApps {
+    background: #742774;
+    color: white
+}

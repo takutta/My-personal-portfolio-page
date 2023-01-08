@@ -1,0 +1,193 @@
+[
+  {
+    "nimi": "Hoitoajat Excel",
+    "konenimi": "hoitoajat_excel",
+    "järjestys": 10,
+    "esittely": "Päiväkodin arkea helpottava työkalu erilaisten listojen luomiseksi.",
+    "teknologiat": [
+      "Excel"
+    ],
+    "github":"https://github.com/takutta/Hoitoajat-Excel",
+    "nettisivu":"",
+    "tarina": "Jyväskylän kaupungin päiväkodeissa työntekijät tekevät itse työvuorosuunnittelun ja tilaavat ruoat. Varhaiskasvatuksen toiminnanohjausjärjestelmä ei kuitenkaan tarjoa kummoisesti informaatiota näiden tehtävien helpottamiseksi. Niinpä rakensin Excelin VBA:lla työkalun, jolla on mahdollisat tuottaa ja tulostaa erilaisia taulukoita ja listoja päiväkodin arkea helpottamaan.",
+    "kuvat": [
+      {
+        "nimi": "paivakoti",
+        "pituus": 1919,
+        "leveys": 1002
+      },
+      {
+        "nimi": "ryhmat",
+        "pituus": 2372,
+        "leveys": 552
+      },
+      {
+        "nimi": "lapset",
+        "pituus": 2390,
+        "leveys": 929
+      },
+      {
+        "nimi": "aamulista",
+        "pituus": 1383,
+        "leveys": 681
+      },
+      {
+        "nimi": "iltalista",
+        "pituus": 1383,
+        "leveys": 1117
+      },
+      {
+        "nimi": "viikkolista",
+        "pituus": 941,
+        "leveys": 969
+      },      {
+        "nimi": "ruokalappu",
+        "pituus": 1446,
+        "leveys": 444
+      },
+      {
+        "nimi": "paivalappu",
+        "pituus": 810,
+        "leveys": 1155
+      }
+    ],
+    "toiminnallisuus": "Käyttäjä kopioi ensin päiväkodin kaikkien lasten hoitoajat Edlevosta ja lisää ne ohjelmaan, joka parsii datan sopivaan muotoon. Sen jälkeen käyttäjä muokkaa halumiaan asetuksia päiväkoti-, ryhmät-, ja lapset-välilehdillä. Lopuksi generoidaan listat ja ne on mahdollista tulostaa.",
+    "todo": ""
+  },
+  
+  {
+    "nimi": "Kertolaskut",
+    "konenimi": "kertolaskut",
+    "järjestys": 30,
+    "esittely": "Verkkosovellus kertolaskujen harjoitteluun.",
+    "teknologiat": [
+      "Flask",
+      "Bootstrap"
+    ],
+    "github":"https://github.com/takutta/Kertolaskut",
+    "nettisivu":"https://kertolaskut.jaakko.info",
+    "tarina": "9v-tyttärelläni oli haasteita kertolaskujen oppimisessa. Niinpä aloin miettimään erilaisia tapoja asian oppimiseen. Halusin sovelluksen, joka kysyy yhden laskun kerrallaan, ja siinä voisi valita haluamansa harjoiteltavat numerot. Sellaista ei löytynyt, niin päätin rakentaa sen itse.",
+    "kuvat": [
+      {
+        "nimi": "alku",
+        "pituus": 873,
+        "leveys": 565
+      },
+      {
+        "nimi": "peli",
+        "pituus": 940,
+        "leveys": 554
+      },
+      {
+        "nimi": "tulokset",
+        "pituus": 699,
+        "leveys": 478
+      }
+    ],
+    "toiminnallisuus": "Aluksi valitaan mitä kertotauluja harjoitellaan. Sovellus kysyy kertolaskuja yksi kerrallaan ja kertoo lopuksi oikeiden ja väärien vastausten lukumäärät.",
+    "todo": [
+      "Tunnus, jolloin peliä voi jatkaa siitä mihin on jäänyt",
+      "Pelillistäminen - ehkä tasot joita edetään",
+      "Sovellus pitäisi kirjaa laskuista, jotka pelaaja jo osaa eikä enää kysyisi niitä",
+      "Tilastointi"
+    ]
+  },
+  {
+    "nimi": "Bingo",
+    "konenimi": "bingo",
+    "järjestys": 40,
+    "esittely": "Bingo-lappujen generointi ja tulostus.",
+    "teknologiat": [
+      "Flask",
+      "Bootstrap"
+    ],
+    "github":"https://github.com/takutta/Bingo",
+    "nettisivu":"https://bingo.jaakko.info",
+    "tarina": "Sain töissä päiväkodissa idean, että voisimme tiimin kanssa pelata bingoa työn lomassa. Pienten lasten ryhmässä tapahtuu paljon usein toistuvia asioita, joista olisi helppo koostaa bingoruudukko. Lisäksi olisi mielenkiintoista jos kaikilla olisi erilainen lappu. Powerpointilla lappujen rakentelu käsipelillä oli aika työlästä eikä netistäkään löytynyt tarpeittemme mukaista ratkaisua. Niinpä päätin toteuttaa sen itse.",
+    "kuvat": [
+      {
+        "nimi": "alku",
+        "pituus": 1732,
+        "leveys": 1206
+      }
+    ],
+    "toiminnallisuus": "Tällä hetkellä palvelulla voi tulostaa 4 kpl 4x4 bingolappua. Tekstit lappuihin ovat sivuston sisäänrakennettuja. Sivusto arpoo uudet laput sivua päivitettäessä.",
+    "todo": [
+      "Rekisteröinti ja kirjautuminen",
+      "Oman sisällön luominen, muokkaus ja poistaminen",
+      "Bingolappujen koon ja ulkonäön muokkaus"
+    ]
+  },
+  {
+    "nimi": "Ruokalistat",
+    "konenimi": "ruokalistat",
+    "järjestys": 20,
+    "esittely": "Jyväskylän kaupungin päiväkotien ruokalistojen haku ja tulostus.",
+    "teknologiat": [
+      "Flask",
+      "Bootstrap"
+    ],
+    "github":"https://github.com/takutta/Ruokalistat",
+    "nettisivu":"https://ruokalistat.jaakko.info",
+    "tarina": "KylänKattaus tarjoaa sivuillaan tulostettavat ruokalistat. Niissä on kuitenkin pakosti merkinnät kaikista allergioivista ruoka-aineista, jotka vievät paljon tilaa ja heikentävät listan luettavuutta. Halusin yksinkertaisen ruokalista, jossa näkyisi 1-2 viikon ruoat selkeästi. Sovellus hakee tietonsta rss-syötteistä ja sommittelee ne käyttäjän haluamaan muotoon.",
+    "kuvat": [
+      {
+        "nimi": "alku",
+        "pituus": 1058,
+        "leveys": 667
+      },
+      {
+        "nimi": "2viikkoa",
+        "pituus": 1253,
+        "leveys": 1706
+      },
+      {
+        "nimi": "1viikko_vuoropk",
+        "pituus": 1256,
+        "leveys": 1706
+      }
+    ],
+    "toiminnallisuus": "Käyttäjä valitsee haluamansa päiväkodin ja asetukset. Tuloksena syntyy 1-2 lappua, jonka/jotka voi tulostaa selaimesta käsin.",
+    "todo": [
+      "Viikot peräkkkäin 2 paperille (yht. 2 viikkoa)",
+      "RSS välimuistiin viikoittain",
+      "Koulujen, vanhainkotien yms. ruokalistojen tukeminen"
+    ]
+  },
+  {
+    "nimi": "Arviointityökalu",
+    "konenimi": "arviointityokalu",
+    "järjestys": 25,
+    "esittely": "Jyväskylän varhaiskasvatukselle tehty arviointikaavake.",
+    "teknologiat": [
+      "PowerApps"
+    ],
+    "github":"",
+    "nettisivu":"",
+    "tarina": "Vuonna 2022 olin mukana Uudet lukutaidot -hankkeessa, jonka tavoitteisiin kuului arviointityökalun tekeminen varhaiskasvatuksen henkilökunnalle. Työkalulla työntekijät voisivat arvioida kykyjään digitaitojen opettamisessa lapsille. Toteutin työkalun PowerAppsin canvas -appilla. Sisältöjen lisäämisestä ja muokkauksesta piti tehdä mahdollisimman yksinkertaista, joten asetin ohjelman hakemaan tietonsa Sharepointin listoilta.",
+    "kuvat": [
+      {
+        "nimi": "alku",
+        "pituus": 1394,
+        "leveys": 1095
+      },
+      {
+        "nimi": "kysymykset",
+        "pituus": 1398,
+        "leveys": 1219
+      },
+      {
+        "nimi": "vinkit",
+        "pituus": 1411,
+        "leveys": 1075
+      },
+      {
+        "nimi": "meili",
+        "pituus": 543,
+        "leveys": 572
+      }
+    ],
+    "toiminnallisuus": "Aluksi käyttäjä valitsee aihealueen, jonka osaamista haluaa arvioida. Käyttäjä vastaa kysymyksiin, jonka jälkeen hän saa palautteen, joka on mahdollista saada myös omaan sähköpostiin.",
+    "todo": ""
+  }
+]
