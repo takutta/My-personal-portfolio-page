@@ -17,7 +17,7 @@ RUN apt-get update
 RUN apt-get install -y npm
 RUN npm install tailwindcss daisyui @tailwindcss/typography
 RUN npx tailwindcss init -p
-RUN npx tailwindcss -i ./static/src/main.css -o ./static/dist/main.css
+RUN npx tailwindcss -i static/scss/main.css -o static/dist/main.css
 
 ENV PORT 8080
 ENV FLASK_ENV=production
