@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder='static')
 
 # Register Blueprintss
 app.register_blueprint(etusivu_bp)
-app.register_blueprint(projektit_bp, )
+app.register_blueprint(projektit_bp)
 app.register_blueprint(musiikki_bp)
         
 if __name__ == "__main__":
