@@ -1,22 +1,22 @@
- steps:
- # Build the container image
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA', '.']
- # Push the container image to Container Registry
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA']
- # Deploy container image to Cloud Run
- - name: 'eu.gcr.io/google.com/cloudsdktool/cloud-sdk'
-   entrypoint: gcloud
-   args:
-   - 'run'
-   - 'deploy'
-   - 'kertolaskut'
-   - '--image'
-   - 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA'
-   - '--region'
-   - 'global'
- images:
- - 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA'
-options: 
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA']
+# Deploy container image to Cloud Run
+- name: 'eu.gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'deploy'
+  - 'kertolaskut'
+  - '--image'
+  - 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA'
+  - '--region'
+  - 'global'
+images:
+- 'eu.gcr.io/superb-robot-371714/my-personal-portfolio-page/oma-portfolio:$COMMIT_SHA'
+options:
   logging: CLOUD_LOGGING_ONLY
