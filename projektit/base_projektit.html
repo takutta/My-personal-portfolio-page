@@ -87,7 +87,7 @@ endblock title %} {% block head %} {{ super() }}
     </div>
     <div class="col-span-2 pswp-gallery my-gallery not-prose" id="my-gallery">
       {% for kuva in projekti['kuvat'] %}
-      <figure class="transition-all duration-300 filter hover:shadow-lg">
+      <figure class="transition-all duration-300 filter hover:saturate-200">
         <a
           href="{{ url_for('static', filename='{}{}{}{}{}'.format('images/', projekti['konenimi'], '/', kuva['nimi'], '.jpg')) }}"
           class="float-left mr-2 {{kuva['pituus']}} "
